@@ -34,7 +34,6 @@ export const CSSReset = createGlobalStyle`
     text-decoration: none;
     opacity: 1;
     transition: .3s;
-    &:hover,
     &:focus {
       opacity: .5;
     }

@@ -1,47 +1,51 @@
 import styled from 'styled-components'
 
 export const StyledTimeline = styled.div`
-  flex: 1;
-  width: 100%;
-  padding: 16px;
-  overflow: hidden;
+   width: 100%;
+   padding: 20px;
 
-  h2 {
-    font-size: 16px;
-    margin-bottom: 16px;
-    text-transform: capitalize;
-  }
-  img {
-    aspect-ratio: 16/9;
-    font-weight: 500;
-    object-fit: cover;
-    width: 100%;
-    max-width: 210px;
-    height: auto;
-  }
-  section {
-    width: 100%;
-    padding: 0;
-    overflow: hidden;
-    padding: 16px;
-    div {
-      width: calc(100vw - 16px * 4);
-      display: grid;
-      grid-gap: 16px;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      grid-auto-flow: column;
-      grid-auto-columns: minmax(200px, 1fr);
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-      a {
-        scroll-snap-align: start;
-        span {
-          padding-top: 8px;
-          display: block;
-          padding-right: 24px;
-          color: ${({ theme }) => theme.textColorBase || '#222222'};
-        }
+   h2 {
+      font-size: 16px;
+      margin-bottom: 16px;
+      text-transform: capitalize;
+   }
+
+   img {
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+
+      &:hover {
+         transition: ease-in-out 0.2s 1.2s;
+         transform: scale(1.18);
       }
-    }
-  }
+   }
+
+   section {
+      width: 100%;
+      margin-bottom: 30px;
+
+      div {
+         /* width: calc(100vw - 16px * 4); */
+         width: 100%;
+         display: grid;
+         grid-gap: 16px;
+         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+         a {
+            text-align: center;
+
+            span {
+               padding-top: 8px;
+               font-size: 0.8rem;
+               font-weight: 600;
+               text-align: start;
+               display: block;
+               color: ${({ theme }) => theme.textColorBase || '#222222'};
+            }
+         }
+      }
+   }
 `
