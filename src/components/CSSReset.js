@@ -9,7 +9,9 @@ export const CSSReset = createGlobalStyle`
   }
 
   body {
-    font-family: sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
+    background-color: ${({ theme }) => theme.backgroundBase};
+    color: ${({ theme }) => theme.textColorBase};
   }
 
   /* NextJS */
@@ -34,6 +36,7 @@ export const CSSReset = createGlobalStyle`
     text-decoration: none;
     opacity: 1;
     transition: .3s;
+    
     &:focus {
       opacity: .5;
     }

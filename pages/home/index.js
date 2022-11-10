@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import config from '../../config.json'
-import { CSSReset } from '../../src/components/CSSReset'
 import StyledHome from './styles'
 import { Menu } from '../../src/components/Menu'
 import { Header } from '../../src/components/Header'
@@ -11,7 +10,6 @@ const Home = () => {
 
   return (
     <StyledHome>
-      <CSSReset />
       <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
       <Header />
       <Timeline searchValue={valorDoFiltro} playlists={config.playlists} />

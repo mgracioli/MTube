@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { StyledSearch } from './styles'
 
 export const Search = ({ valorDoFiltro, setValorDoFiltro }) => {
